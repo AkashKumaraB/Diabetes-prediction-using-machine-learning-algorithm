@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <style media="screen">
+        *,
+        *:before,
+        *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        body {
+            background-color: #080710;
+        }
+
+        .divonly {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 60%;
+            left: 50%;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.13);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        form {
+            height: 910px;
+            width: 600px;
+            /* background-color: rgba(255, 255, 255, 0.13); */
+            position: relative;
+            /* transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 10px; */
+            /* backdrop-filter: blur(10px); */
+
+
+            padding: 50px 35px;
+        }
+
+        form * {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+
+        }
+
+        form h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+            padding-top: 25px;
+            color: #FFFF00;
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        input {
+            display: block;
+            height: 30px;
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+            padding: 20 10px;
+            line-height: 18px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: right;
+        }
+
+        ::placeholder {
+            color: #e5e5e5;
+        }
+
+        button {
+            margin-top: 50px;
+            width: 30%;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #ea1538;
+            padding: 5px 5px;
+            border-radius: 15px;
+            color: white;
+            font-weight: bold;
+
+            font-size: 15px;
+            transition: .4s;
+        }
+
+        button:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+            transition: .5s;
+        }
+
+        div div {
+            padding-bottom: 30px;
+            padding-top: 20px;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+</head>
+
+<body>
+    <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    -->
+    <div class="divonly" align="center">
+        <form action="result">
+            {% csrf_token %}
+            <!-- <h1>Welcome to the Diabetes Prediction System</h1> -->
+            <h1>Hello {{user}}</h1>
+            <h3>Please Enter The Following Information</h3>
+
+             <label>Enter Name</label>
+            <input type="text" placeholder="Name" name="Name" id="Name">
+
+            <label>Pregnancies</label>
+            <input type="number" placeholder="Pregnancies" name="pregnancies" id="Pregnancies">
+
+            <label>Glucose</label>
+            <input type="number" placeholder="Glucose" name="glucose" id="Glucose">
+
+            <label for="blood">Blood Pressure</label>
+            <input type="number" placeholder="Blood pressure" id="Blood" name="blood">
+
+            <label for="skin">Skin Thickness</label>
+            <input type="number" placeholder="Skin Thickness" id="Skin" name="skin">
+
+            <label for="insulin">Insulin</label>
+            <input type="number" placeholder="Insulin" id="insulin" name="insulin">
+
+            <label for="Bmi">BMI</label>
+            <input type="text" placeholder="BMI" id="bmi" name="Bmi">
+
+            <label for="dpf">DPF</label>
+            <input type="text" placeholder="Diabetes Pedigree function" id="Dpf" name="dpf">
+
+            <label for="age">Age</label>
+            <input type="number" placeholder="Age" id="Age" name="age">
+
+            <button type="submit">Submit</button>
+        </form>
+        <div>Result:{{result1}}</div>
+    </div>
+
+
+</body>
+
+</html>

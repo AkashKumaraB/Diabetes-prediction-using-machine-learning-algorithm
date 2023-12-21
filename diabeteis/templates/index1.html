@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(242, 189, 119);
+}
+maindiv{
+    height: 90vh;
+}
+.maindiv .firstdiv{
+    position: absolute;
+    top: 50px;
+    left :50px;
+}
+.maindiv div h1{
+    font-size: 35px;
+    color: rgb(179, 29, 29);
+}
+.maindiv div h2{
+    font-size: 25px;
+    color: rgb(179, 29, 29);
+}
+.seconddiv{
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    color: rgb(212, 60, 60);
+    font-size: 20px;
+}
+    </style>
+</head>
+<body>
+<!-- {% csrf_token %}  -->
+    <div class="maindiv">
+        <h3>Please Enter The Following Information</h3>
+            <label>Pregnancies</label>
+            <h1>{{ val1 }}</h1>
+            <br>
+
+            <label>Glucose</label>
+            <h1>{{ val2 }}</h1>
+            <br>
+            <label for="blood">Blood Pressure</label>
+            <h1>{{ val3 }}</h1>
+            <br>
+            <label for="skin">Skin Thickness</label>
+            <h1>{{ val4 }}</h1>
+            <br>
+
+            <label for="insulin">Insulin</label>
+            <h1>{{ val5 }}</h1>
+            <br>
+            <label for="Bmi">BMI</label>
+            <h1>{{ val6 }}</h1>
+            <br>
+            <label for="dpf">DPF</label>
+            <h1>{{ val7 }}</h1>
+            <br>
+
+            <label for="age">Age</label>
+            <h1>{{ val8 }}</h1>
+            <br>
+  
+<div class="divonly"><h2>Confidence score for the forest fire is : {{ result1 }}</h2></div>
+    </div>
+ <div>
+        <h1>Download PDF in django</h1>
+<a class="nav-link" href="{% url 'pdf' %}">Download PDF Report</a>
+    </div>
+</body>
+</html>

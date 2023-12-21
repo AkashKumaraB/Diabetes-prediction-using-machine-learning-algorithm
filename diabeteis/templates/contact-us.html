@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+    <style>
+        /* Global Styles */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #f1f1f1;
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 40px;
+}
+
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* Card Styles */
+.card {
+	position: relative;
+	width: 300px;
+	height: 400px;
+	margin: 20px;
+	perspective: 1000px;
+}
+
+.front, .back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transition: transform 0.5s;
+}
+
+.front {
+	background-color: #fff;
+	padding: 20px;
+	transform: rotateY(0);
+}
+
+.back {
+	background-color: #eaeaea;
+	padding: 20px;
+	transform: rotateY(180deg);
+}
+
+.card:hover .front {
+	transform: rotateY(180deg);
+}
+
+.card:hover .back {
+	transform: rotateY(0);
+}
+
+/* Card Content Styles */
+img {
+	width: 100%;
+	height:265px;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+	<div class="container">
+		<h1>Contact Us</h1>
+		<div class="card-container">
+			<div class="card">
+				<div class="front">
+					<img src="../static/pictures/akash.jpg" alt="John Doe">
+					<h2>AKASH KUMARA B</h2>
+					<p>Student @ BITM</p>
+				</div>
+				<div class="back">
+					<img src="../static/pictures/akash1.jpg" alt="John Doe's contact information">
+					<p>Email: akashakash8096@gmail.com</p>
+					<p>Phone: +91 6362 505 870</p>
+				</div>
+			</div>
+			<!-- Repeat the same pattern for the other cards -->
+			<div class="card">
+				<div class="front">
+					<img src="../static/pictures/pavan.jpg" alt="Jane Smith">
+					<h2>G H PavanKumar</h2>
+					<p>Student @ BITM</p>
+				</div>
+				<div class="back">
+					<img src="../static/pictures/pavan1.jpg" alt="Jane Smith's contact information">
+					<p>Email: pk6568528@gmail.com</p>
+					<p>Phone: +91 80881 71991</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="front">
+					<img src="../static/pictures/rahul.jpg" alt="Bob Johnson">
+					<h2>Raghavendra Rahul G V</h2>
+					<p>Student @ BITM</p>
+				</div>
+				<div class="back">
+					<img src="../static/pictures/rahul1.jpg" alt="Bob Johnson's contact information">
+					<p>Email: raghavendrarahul600@gmail.com</p>
+					<p>Phone: +91 89043 20482</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="front">
+					<img src="../static/pictures/faizul1.jpg" alt="Susan Lee">
+					<h2>Faizul Mateen</h2>
+					<p>Student @ BITM</p>
+				</div>
+				<div class="back">
+					<img src="../static/pictures/faizul2.jpg" alt="Susan Lee's contact information" height="120px">
+					<p>Email: faizulmateen45@gmail.com</p>
+					<p>Phone: +91 97410 03780</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
